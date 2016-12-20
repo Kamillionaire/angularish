@@ -1,0 +1,21 @@
+{
+  "name": "app0201",
+  "description": "my first app yo",
+  "main": "",
+  "authors": [
+    "Kamilah"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.0"
+  }
+}
