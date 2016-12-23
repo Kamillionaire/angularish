@@ -1,0 +1,35 @@
+  <div ng-cloak>
+    <hr/>
+    <label> Choose a Pet!</label>
+    <hr/>
+  <div>
+    <label>New Pet Name</label>
+    <md-input-container>
+    <input ng-model="vm.newPet.name" type="text"/>
+    </md-input-container>
+  </div>
+  <div>
+  <md-input-container><label>New Pet Price</label>
+    <input ng-model="vm.newPet.price" type="number"/>
+    </md-input-container>
+    </div>
+<hr/>
+<!-- <button type="" name="button" ng-click="actualUpdate( )">Edit Pet</button> -->
+<button ng-show="vm.validForm(vm.newPet)"
+
+        ng-click="vm.makeNewPet()">New Pet</button>
+    <hr/>
+   <input ng-model="vm.searchTerm"/>
+   <h3> Pet List </h3>
+   <div layout="row"layout-align="center center">
+     <md-card flex="20" ng-repeat="item in vm.pets | filter: vm.searchTerm">
+        {{item.name}}:
+       {{item.price | currency}}
+       <a ui-sref="petDetails({name:item.name})">view pet details</a>
+       <md-button class="md-accent"ng-click="vm.deleteThis(item,$index)" >delete</md-button>
+       <md-button class="md-warn"ng-click="vm.updateThis(item)" >update</md-button>
+       <img ng-src="{{item.image}}"/>
+     </md-card>
+   </div >
+
+ </div>

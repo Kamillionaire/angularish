@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="myPetStoreApp">
+  <head>
+    <title> ng pSApp </title>
+    <meta charset="utf-8">
+     <base href="/" />
+     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+     <link href="../bower_components/angular-material/angular-material.min.css" rel="stylesheet" />
+     <link rel="stylesheet" href="pSApp.css">
+  </head>
+  <body>
+      <a ui-sref="Home">Home</a> | <a ui-sref="petStore">Pet Store</a>
+      <ui-view></ui-view>
+
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <script src="../bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="/bower_components/angular-material/angular-material.min.js"></script>
+    <script src="/bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="/bower_components/angular-aria/angular-aria.min.js"></script>
+    <script src="/bower_components/angular-messages/angular-messages.min.js"></script>
+    <script src="pSApp.js"></script>
+    <script src= "controllers/myPSController.js"></script>
+    <script src= "controllers/detailsController.js"></script>
+
+    </script>
+  </body>
+</html>
